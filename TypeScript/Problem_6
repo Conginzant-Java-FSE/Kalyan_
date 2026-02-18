@@ -1,0 +1,8 @@
+function createLobby<T>(players: T[]): { totalPlayers: number; players: T[] } {
+  return {
+    totalPlayers: players.length,
+    players: [...players]
+  };
+}
+
+const lobby = createLobby(["Player1", "Player2", "Player3"]);
