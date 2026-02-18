@@ -1,0 +1,41 @@
+
+interface MobileApp {
+  name: string;
+  developer: string;
+  downloads: number;
+  rating?: number; 
+  isPremium: boolean;
+}
+
+const app1: MobileApp = {
+  name: "ChatPro",
+  developer: "TechSoft",
+  downloads: 500000,
+  rating: 4.7,
+  isPremium: false
+};
+
+const app2: MobileApp = {
+  name: "PhotoEditX",
+  developer: "Pixel Labs",
+  downloads: 200000,
+  isPremium: true
+};
+
+const app3: MobileApp = {
+  name: "FitnessGo",
+  developer: "HealthTech",
+  downloads: 750000,
+  rating: 4.3,
+  isPremium: false
+};
+
+
+function isHighlyRated(app: MobileApp): boolean {
+  return app.rating !== undefined && app.rating >= 4.5;
+}
+
+
+console.log(isHighlyRated(app1)); 
+console.log(isHighlyRated(app2)); 
+console.log(isHighlyRated(app3)); 
