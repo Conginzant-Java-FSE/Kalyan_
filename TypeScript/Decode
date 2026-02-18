@@ -1,0 +1,15 @@
+function decodeSecret(message: string): string {
+  const vowelMap: Record<string, string> = {
+    "4": "a",
+    "3": "e",
+    "1": "i",
+    "0": "o",
+    "8": "u"
+  };
+
+  return message.replace(/[43108]/g, (char) => vowelMap[char] || char);
+}
+
+
+console.log(decodeSecret("H3ll0 W0rld! Th1s 1s 4 t3st."));
+
