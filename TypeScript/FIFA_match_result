@@ -53,7 +53,7 @@ function getMatchResult(match: Match): string {
   }
 }
 
-// 4️⃣ Test the function
-console.log(getMatchResult(match1)); // Brazil
-console.log(getMatchResult(match2)); // Draw
-console.log(getMatchResult(match3)); // Match not completed
+
+console.log(getMatchResult(match1)); 
+console.log(getMatchResult(match2)); 
+console.log(getMatchResult(match3)); 
