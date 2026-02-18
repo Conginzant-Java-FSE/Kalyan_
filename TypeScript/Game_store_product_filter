@@ -1,0 +1,27 @@
+
+type Platform = "PC" | "PlayStation" | "Xbox" | "Mobile";
+
+interface Game {
+  title: string;
+  price: number;
+  platform: Platform;
+  inStock: boolean;
+}
+
+
+const games: Game[] = [
+  { title: "CyberWar", price: 59.99, platform: "PC", inStock: true },
+  { title: "Speed Racer", price: 49.99, platform: "PlayStation", inStock: true },
+  { title: "Battle Arena", price: 39.99, platform: "Xbox", inStock: false },
+  { title: "Mobile Legends", price: 0, platform: "Mobile", inStock: true },
+  { title: "Space Quest", price: 29.99, platform: "PC", inStock: false }
+];
+
+
+function filterByPlatform(games: Game[], platform: Platform): Game[] {
+  return games.filter(
+    (game) => game.platform === platform && game.inStock
+  );
+}
+
+console.log(filterByPlatform(games, "PC"));
