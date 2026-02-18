@@ -1,0 +1,8 @@
+const config = {
+  theme: "dark",
+  version: 2
+} as const;
+
+type Theme = typeof config.theme;
+
+let theme: Theme = "dark";
